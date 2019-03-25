@@ -25,3 +25,10 @@ localhost:5656/restaurants/0
 ```
 
 - Rate your service by the `Richardson Maturity Model`. What could be enhanced to reach exactly one level higher within this model? Name one specific implementation.
+
+## Tips
+To fetch your missing node packages, use `npm install` or `yarn install`, as they are already all recorded in your `package.json` file.
+
+To start your server use `node server.js` in your directory.
+
+Maybe collapse other code, to be more challenged to come up with a solution yourself, especially concerning the `server.js` file.

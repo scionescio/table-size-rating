@@ -17,22 +17,6 @@ const getRestaurants = () => {
     });
 };
 
-// GET http://localhost:5656/recommendation
-const getRecommendation = () => {
-  const dataList = document.getElementById("bigTableCafes");
-  fetch("http://localhost:5656/recommendation")
-    .then(response => response.json())
-    .then(recommendations => {
-      for (let index = 0; index < recommendations.length; index++) {
-        const nameOfPlace = recommendations[index].name;
-        console.log(nameOfPlace);
-        const optionTag = document.createElement("option");
-        optionTag.value = nameOfPlace;
-        dataList.appendChild(optionTag);
-      }
-    });
-};
-
 // POST http://localhost:5656/restaurants
 const postRestaurants = () => {
   const a = document.getElementById("id").value;

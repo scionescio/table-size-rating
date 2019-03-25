@@ -5,8 +5,11 @@ const cors = require("cors");
 const server = express();
 server.use(cors());
 server.use(express.static("website"));
-
 server.use(bodyparser.json());
+
+// TODO GET RECOMMENDATIONS
+
+// TODO POST RECOMMENDATIONS
 
 server.get("/restaurants", (req, res) => {
   res.setHeader("Content-Type", "application/json");
@@ -34,11 +37,6 @@ server.delete("/restaurants/:id", (req, res) => {
   res.send(restaurantsArray);
 });
 
-server.get("/recommendation", (req, res) => {
-  res.setHeader("Content-Type", "application/json");
-  res.send(recommendationArray);
-});
-
 server.post("/restaurants", (req, res) => {
   console.log(req.body);
   let restaurant = {
@@ -49,18 +47,6 @@ server.post("/restaurants", (req, res) => {
   restaurantsArray.push(restaurant);
   res.send(restaurant);
 });
-
-let recommendationArray = [
-  {
-    name: "Balzac"
-  },
-  {
-    name: "Beta House"
-  },
-  {
-    name: "Mokka Café"
-  }
-];
 
 let restaurantsArray = [
   {
