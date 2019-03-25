@@ -14,21 +14,23 @@ To hide the fact, that you are selling your soul for some ad money, from the use
 
 - Use the [`datalist`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist) HTML element to implement your recommendation service.
 
-- Test your `REST API` from your console (in case it doesn't work try [this](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi)). 
-
-```
-// This might help
-curl --header "Content-Type: application/json" \
-  --request PUT \
-  --data '{"id":"xyz","name":"hi", "rating":"3"}' \
-localhost:5656/restaurants/0
-```
+- Test your `REST API` from your console. 
 
 - Rate your service by the `Richardson Maturity Model`. What could be enhanced to reach exactly one level higher within this model? Name one specific implementation.
 
 ## Tips
 To fetch your missing node packages, use `npm install` or `yarn install`, as they are already all recorded in your `package.json` file.
 
+In case it doesn't work due to `CORS` failures, try [this](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi).
+
 To start your server use `node server.js` in your directory.
 
 Maybe collapse other code, to be more challenged to come up with a solution yourself, especially concerning the `server.js` file.
+
+```
+// This might help for curl-ing
+curl --header "Content-Type: application/json" \
+  --request PUT \
+  --data '{"id":"xyz","name":"hi", "rating":"3"}' \
+localhost:5656/restaurants/0
+```

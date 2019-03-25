@@ -3,6 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
   getRecommendation();
 });
 
+const getRecommendation = () => {
+  // TODO
+  return;
+};
+
 // GET http://localhost:5656/restaurants
 const getRestaurants = () => {
   const b = document.getElementById("appendRestaurantsHere");
